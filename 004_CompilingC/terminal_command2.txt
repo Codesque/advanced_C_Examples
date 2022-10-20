@@ -1,0 +1,9 @@
+AdemBerkYuksel@LAPTOP-V2T915IT MINGW64 ~/BTUDataStructures/004_CompilingC
+$ gcc -Wall -save-temps filename.c -o filename
+// After this command filename.exe is generated 
+
+
+// After compilation executable is generated and we run the generated executable using below command 
+AdemBerkYuksel@LAPTOP-V2T915IT MINGW64 ~/BTUDataStructures/004_CompilingC
+$ ./filename.exe
+Addition is: 9

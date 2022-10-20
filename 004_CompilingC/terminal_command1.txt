@@ -1,0 +1,21 @@
+AdemBerkYuksel@LAPTOP-V2T915IT MINGW64 ~/BTUDataStructures
+$ cd 004_CompilingC/
+
+//program for the addition of two numbers 
+#include <stdio.h>
+#define add(a,b) (a+b) 
+
+int main(){
+    int a = 5, b = 4;
+    printf("Addition is: %d\n", add(a,b));
+    return 0;
+}
+~
+~
+~
+// Pressed CTRL Z to exit 
+
+AdemBerkYuksel@LAPTOP-V2T915IT MINGW64 ~/BTUDataStructures/004_CompilingC
+$ vi filename.c
+
+[1]+  Stopped                 vi filename.c
