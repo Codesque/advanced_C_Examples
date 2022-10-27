@@ -1,0 +1,56 @@
+Translation Unit : 
+
+     A translation unit is a file containing source code, header files and other dependencies. 
+     All of these sources are grouped together to form a single translation unit which can then be used by the compiler to 
+     produce one single executable object. It is important to link the sources together in a meaningful way. 
+     For example, the compiler should know that printf definition lies in stdio header file.
+
+
+Scope : 
+
+    Scope is something that is determined in the complation process of compiling. 
+    In this process compiler looks for the area that an identifier can effect. 
+    But as a reminder the definitions of the variables , functions are not done in this process.  
+    Defining is done by LINKER at the linkage process of compiling. (Defining means giving values and allocating memory)
+
+    For an example , if there is a variable , compiler looks for if there is declaration or definition of that variable in appopriate scope.
+    
+    ****    IF THERE IS AN `EXTERN` KEYWORD BESIDE OF THE VARIABLE , COMPILER GIVES THE "SEARCHING DEFINITION" WORK TO LINKER WHICH LOOKS AT 
+    THE ENTIRE TRANSLATION UNIT. LINKER LOOKS AT EVERY TRANSLATION UNIT ONE BY ONE TO FIND A GLOBAL DEFINITION OF THAT VARIABLE/FUNCTION.
+
+
+Linkage :
+
+    Linkage is done in the linking process of compiling. 
+    Linkage allows you to couple names together on a per file basis. 
+    In other words , Linkage is a property that describes how variables should be linked by the linker due depending on file basis . 
+    These questions , Should a variable be available for another file to use? Should a variable be used only in the file declared? , are decided
+    in linkage process by linker. 
+
+
+    THERE ARE TWO TYPES OF LINKAGES : 
+
+        INTERNAL LINKAGE : 
+
+            An identifier that linked as internal , is not accessible to outside of the current translation unit.
+            It can be implemented by the `static` keyword 
+            An internally linked identifier is stored in initialized or uninitialized segment of RAM. 
+
+            INTERNAL LINKED IDENTIFIERS ARE PASSED BY COPY. Which means when we use them , we get a copy of the global variable. 
+            Thus , internal linkage is MEMORY INEFFICIENT(because you create instances of the same variable) 
+            
+            *****   When there is a definition of a function named `func1` and there is a header file that also defines `func1` differently 
+            if the func1 is internally linked , these two `func1`s dont clash with eachother.  
+
+            Thus, we commonly use internal linkage to hide translation-unit-local helper functions from the global scope.
+
+
+
+        EXTERNAL LINKAGE : 
+
+            All externally linked identifiers refers to the same global identifier . 
+            Which means only one definition of that variable can be done (Which is memory efficient) 
+
+
+
+    

@@ -1,0 +1,4 @@
+NAME			AGE			CITY
+Adem			21			Bursa
+Furkan			21			Eskisehir
+Buse			32			Istanbul
