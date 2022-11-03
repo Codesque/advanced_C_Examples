@@ -1,7 +1,7 @@
 #include <stdio.h> 
 
 
-// while using comma identifier as a seperator instead of operator , you need to consider ltf associativity rules. 
+// while using comma identifier as a seperator instead of operator , you need to consider ltr associativity rules. 
 void comma_with_associativity(){
     int a;
     a = 2, 3, 4; // this expression expanded as (a=2),3,4 because of associativity.
